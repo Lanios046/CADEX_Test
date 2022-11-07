@@ -38,7 +38,7 @@ double Ellipse::FDerivate(double t)
     if(radius>radius2)
     {
         double c=sqrt(radius*radius-radius2*radius2);//horizontal orientation
-        double angleAlpha=(t*180)/(M_PI*radius);
+        double angleAlpha=t/(M_PI*radius);
         double TgAngleBeta=(radius2*sin(angleAlpha)/(radius*cos(angleAlpha)));//tg of dependent angle
         PointOnEllipce.Set(center.x+(radius*cos(atan(TgAngleBeta))),center.y+(radius2*sin(atan(TgAngleBeta))),0);//point coordinates
         Foc1.Set(center.x+c,0,0);
@@ -47,7 +47,7 @@ double Ellipse::FDerivate(double t)
     else
     {
         double c=sqrt(radius2*radius2-radius*radius);//vertical orientation
-        double angleAlpha=(t*180)/(M_PI*radius);
+        double angleAlpha=t/(M_PI*radius);
         double TgAngleBeta=(radius*sin(angleAlpha)/(radius2*cos(angleAlpha)));//tg of dependent angle
         PointOnEllipce.Set(center.x+(radius2*cos(atan(TgAngleBeta))),center.y+(radius*sin(atan(TgAngleBeta))),0);//point coordinates
         Foc1.Set(0,center.y+c,0);
