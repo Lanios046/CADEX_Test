@@ -56,5 +56,5 @@ double Ellipse::FDerivate(double t)
     double k1=(PointOnEllipce.x-Foc1.x)/(PointOnEllipce.y-Foc1.y);//tan of 1st line
     double k2=(PointOnEllipce.x-Foc2.x)/(PointOnEllipce.y-Foc2.y);//tan of 2nd line
     double TgAnglePhy=(k2-k1)/(1-k1*k2);//tg of crossing
-    return tan((180-atan(TgAnglePhy))/2);//Derivate
+    return tan((1-atan(TgAnglePhy))/2);//Derivate
 }
